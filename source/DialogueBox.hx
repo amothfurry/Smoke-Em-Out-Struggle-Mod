@@ -248,22 +248,16 @@ class DialogueBox extends FlxSpriteGroup
 			swagDialogue.color = FlxColor.WHITE;
 			dropText.color = FlxColor.BLACK;
 		}
-		else if (PlayState.SONG.song.toLowerCase()=='headache' || PlayState.SONG.song.toLowerCase()=='nerves')
+		else if (PlayState.SONG.song.toLowerCase() == 'headache' || PlayState.SONG.song.toLowerCase() == 'nerves')
 		{
 			swagDialogue.color = FlxColor.WHITE;
 			dropText.color = FlxColor.BLACK;
 		}
-		else if (PlayState.SONG.song.toLowerCase()=='release')
+		else if (PlayState.SONG.song.toLowerCase() == 'release' && PlayState.SONG.song.toLowerCase() == 'fading')
 		{
 			swagDialogue.color = 0xFF0DF07E;
 			dropText.color = FlxColor.BLACK;
 		}
-		else if (PlayState.SONG.song.toLowerCase()=='fading')
-		{
-			swagDialogue.color = 0xFF0DF07E;
-			dropText.color = FlxColor.BLACK;
-		}
-
 
 		dropText.text = swagDialogue.text;
 
@@ -294,7 +288,7 @@ class DialogueBox extends FlxSpriteGroup
 				{
 					isEnding = true;
 
-					if (PlayState.SONG.song.toLowerCase() == 'senpai' || PlayState.SONG.song.toLowerCase() == 'thorns' || PlayState.SONG.song.toLowerCase() == 'fading' )
+					if (PlayState.SONG.song.toLowerCase() == 'senpai' || PlayState.SONG.song.toLowerCase() == 'thorns' || PlayState.SONG.song.toLowerCase() == 'fading')
 						FlxG.sound.music.fadeOut(2.2, 0);
 
 					new FlxTimer().start(0.2, function(tmr:FlxTimer)
