@@ -613,7 +613,7 @@ class ChartingState extends MusicBeatState
 					FlxG.sound.music.pause();
 					vocals.pause();
 
-					var daTime:Float = 700 * FlxG.elapsed;
+					var daTime:Float = 700 * elapsed;
 
 					if (FlxG.keys.pressed.W)
 					{
