@@ -139,6 +139,7 @@ class DialogueBox extends FlxSpriteGroup
 		portraitLeft.frames = Paths.getSparrowAtlas('weeb/gardialogue');
 		portraitLeft.animation.addByPrefix('enter', 'gar Default', 24, false);
 		// portraitLeft.setGraphicSize(Std.int(portraitLeft.width * PlayState.daPixelZoom * 0.2));
+		portraitLeft.antialiasing = true;
 		portraitLeft.updateHitbox();
 		portraitLeft.scrollFactor.set();
 		add(portraitLeft);
@@ -150,6 +151,7 @@ class DialogueBox extends FlxSpriteGroup
 		portraitLeft.frames = Paths.getSparrowAtlas('weeb/gardialogue');
 		portraitLeft.animation.addByPrefix('enter', 'gar Nervous', 24, false);
 		// portraitLeft.setGraphicSize(Std.int(portraitLeft.width * PlayState.daPixelZoom * 0.2));
+		portraitLeft.antialiasing = true;
 		portraitLeft.updateHitbox();
 		portraitLeft.scrollFactor.set();
 		add(portraitLeft);
@@ -161,6 +163,7 @@ class DialogueBox extends FlxSpriteGroup
 		portraitLeft.frames = Paths.getSparrowAtlas('weeb/gardialogue');
 		portraitLeft.animation.addByPrefix('enter', 'gar Ghost', 24, false);
 		// portraitLeft.setGraphicSize(Std.int(portraitLeft.width * PlayState.daPixelZoom * 0.2));
+		portraitLeft.antialiasing = true;
 		portraitLeft.updateHitbox();
 		portraitLeft.scrollFactor.set();
 		add(portraitLeft);
@@ -172,6 +175,7 @@ class DialogueBox extends FlxSpriteGroup
 		portraitLeft.frames = Paths.getSparrowAtlas('weeb/gardialogue');
 		portraitLeft.animation.addByPrefix('enter', 'gar Dippy', 24, false);
 		// portraitLeft.setGraphicSize(Std.int(portraitLeft.width * PlayState.daPixelZoom * 0.2));
+		portraitLeft.antialiasing = true;
 		portraitLeft.updateHitbox();
 		portraitLeft.scrollFactor.set();
 		add(portraitLeft);
@@ -195,6 +199,7 @@ class DialogueBox extends FlxSpriteGroup
 		portraitRight.frames = Paths.getSparrowAtlas('weeb/bf_norm');
 		portraitRight.animation.addByPrefix('enter', 'Boyfriend portrait Enter', 24, false);
 		// portraitRight.setGraphicSize(Std.int(portraitRight.width * PlayState.daPixelZoom * 0.4));
+		portraitRight.antialiasing = true;
 		portraitRight.updateHitbox();
 		portraitRight.scrollFactor.set();
 		add(portraitRight);
@@ -211,6 +216,11 @@ class DialogueBox extends FlxSpriteGroup
 
 		handSelect = new FlxSprite(FlxG.width * 0.9, FlxG.height * 0.9).loadGraphic(Paths.image('weeb/pixelUI/hand_textbox'));
 		add(handSelect);
+		
+		if (PlayState.SONG.song.toLowerCase()=='headache' || PlayState.SONG.song.toLowerCase()=='nerves' || PlayState.SONG.song.toLowerCase()=='release' || PlayState.SONG.song.toLowerCase()=='fading')
+		{
+		handSelect.antialiasing = true;
+		}
 
 
 		if (!talkingRight)
